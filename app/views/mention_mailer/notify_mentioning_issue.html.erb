@@ -1,0 +1,9 @@
+<h4><%= link_to "[#{@issue.project.name} - #{@issue.tracker.name} ##{@issue.id}] #{@issue.subject}", issue_url(@issue) %></h4>
+
+<br /><br />
+
+<i>You were mentioned on <strong><%= @issue.created_on.to_s(:db) %></strong></i>
+
+<br /><br />
+
+<p><%= @issue.description %></p>

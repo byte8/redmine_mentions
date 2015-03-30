@@ -3,7 +3,7 @@ module RedmineMentions
     def self.included(base)
       base.class_eval do
         after_create :send_mail
-        
+
         def send_mail
           if self.journalized.is_a?(Issue) && self.notes.present?
             issue = self.journalized
